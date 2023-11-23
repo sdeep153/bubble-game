@@ -21,7 +21,7 @@ const StartNewGame = () => {
         document.querySelector('#hit').innerHTML = hit_val
     }
 
-    var timer_val = 60;
+    var timer_val = 1;
 
     const showTimer = () => {
         document.querySelector('#timer').textContent = timer_val;
@@ -45,7 +45,6 @@ const StartNewGame = () => {
 
                                                             `
                 HighScore = Math.max(HighScore, score_val)
-                console.log(HighScore)
             }
         }, 1000)
         

@@ -87,3 +87,20 @@ html, body{
     background-color: rgb(233, 145, 145);
     cursor : pointer
 }
+
+.restart_btn{
+    height : 50px;
+    width : 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 10px;
+    color: black;
+}
+
+.restart_btn:hover{
+    background-color: rgb(90, 164, 90);
+    color: white;
+    cursor: pointer;
+}
