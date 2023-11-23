@@ -21,7 +21,7 @@ const StartNewGame = () => {
         document.querySelector('#hit').innerHTML = hit_val
     }
 
-    var timer_val = 1;
+    var timer_val = 60;
 
     const showTimer = () => {
         document.querySelector('#timer').textContent = timer_val;
