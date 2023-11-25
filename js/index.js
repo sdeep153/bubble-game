@@ -1,4 +1,16 @@
 var HighScore = 0;
+//Game Sound
+var main_sound, play_game_sound, incorrect_hit_sound;
+
+document.addEventListener('DOMContentLoaded', () => {
+    main_sound = document.getElementById('main_sound');
+    play_game_sound = document.getElementById('start_game_sound');
+    incorrect_hit_sound = document.getElementById('incorrect_sound');
+})
+
+const playMainSound = () => {
+    main_sound.play()
+}
 
 const StartNewGame = () => {
     var bubble_val = 0;
@@ -61,10 +73,21 @@ const StartNewGame = () => {
 
     
     document.getElementById('pbtm').addEventListener('click', (event) => {
+        console.log(event.target)
         var clicked_num = Number(event.target.textContent) 
         
-        if(clicked_num === hit_val){
+        if(clicked_num == hit_val){
+            const correct_hit_sound = document.getElementById('correct_sound')
+            correct_hit_sound.play()
+
             AddScore()
+            MakeBubble()
+            getNewHit()
+        }
+        else{
+            incorrect_hit_sound.play()
+            score_val -= 5;
+            showScore()
             MakeBubble()
             getNewHit()
         }
@@ -74,12 +97,14 @@ const StartNewGame = () => {
         if (event.target && event.target.id === 'restart') {
             timer_val=60;
             score_val=0;
+            play_game_sound.play()
             MakeBubble()
             getNewHit()
             showTimer()
             RunTimer()
             showScore()
             showHighScore()
+            playMainSound()
         }
     });
 
@@ -92,6 +117,9 @@ const StartNewGame = () => {
     showTimer()
     RunTimer()
     showHighScore()
+    playMainSound()
 }
 
+
 StartNewGame()
+playMainSound()
