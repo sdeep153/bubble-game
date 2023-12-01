@@ -3,16 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/game.css">
     <title>Bubble Game</title>
 </head>
-<body>
+<body> 
+    <audio id="main_sound" src="./assets/main_sound.mp3"></audio>
+    <audio id="correct_sound" src="./assets/start_game.mp3"></audio>
+    <audio id="start_game_sound" src="./assets/correct.mp3"></audio>
+    <audio id="incorrect_sound" src="./assets/incorrect.mp3"></audio>
+    
     <div id="main">
         <div id="panel">
             <div id="ptop">
                 <div class="elem">
                     <h4>Hit</h4>
-                    <div class="box" id="hit">X</div>
+                    <div class="box" id="hit">0</div>
                 </div>
                 <div class="elem">
                     <h4>Timer</h4>
@@ -20,23 +25,18 @@
                 </div>
                 <div class="elem">
                     <h4>Score</h4>
-                    <div class="box" id="score">X</div>
+                    <div class="box" id="score">0</div>
                 </div>
                 <div class="elem">
                     <h4>High Score</h4>
-                    <div class="box" id="high_score">X</div>
+                    <div class="box" id="high_score">0</div>
                 </div>
             </div>
             <div id="pbtm">
-                <a href="./game.html">
-                    <h3 class="start_btn">
-                        Start Game
-                    </h3>
-                </a>
             </div>
         </div>
     </div>
-
-    <script src="./js/index.js"></script>
 </body>
+
+<script src="./js/game.js"></script>
 </html>
