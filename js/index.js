@@ -1,21 +1,21 @@
 var HighScore = 0;
 //Game Sound
-var main_sound, play_game_sound, incorrect_hit_sound;
-
-document.addEventListener('DOMContentLoaded', () => {
-    main_sound = document.getElementById('main_sound');
-    play_game_sound = document.getElementById('start_game_sound');
-    incorrect_hit_sound = document.getElementById('incorrect_sound');
-})
-
-const playMainSound = () => {
-    main_sound.play()
-}
+var main_sound = document.getElementById('main_sound');
+var play_game_sound, incorrect_hit_sound;
 
 const StartNewGame = () => {
     var bubble_val = 0;
     var hit_val = 0;
     var score_val = 0;
+
+    // document.addEventListener('DOMContentLoaded', () => {
+        
+    // })
+
+
+    const playMainSound = () => {
+        main_sound.play()
+    }
 
     const MakeBubble = () => {
         var clutter=""
@@ -117,9 +117,12 @@ const StartNewGame = () => {
     showTimer()
     RunTimer()
     showHighScore()
-    playMainSound()
 }
 
 
-StartNewGame()
-playMainSound()
+document.addEventListener('DOMContentLoaded', () => {
+    StartNewGame()
+    main_sound.play()
+    play_game_sound = document.getElementById('start_game_sound');
+    incorrect_hit_sound = document.getElementById('incorrect_sound');
+})
