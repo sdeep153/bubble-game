@@ -69,6 +69,7 @@ a{
     background-color: #E8F1F2;
     padding : 10px 10px 35px 10px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
@@ -77,8 +78,8 @@ a{
 
 
 .restart_btn{
-    height : 60px;
-    width : 120px;
+    height : 55px;
+    width : 110px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -95,8 +96,8 @@ a{
 }
 
 .start_btn{
-    height : 60px;
-    width : 120px;
+    height : 55px;
+    width : 110px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -110,4 +111,10 @@ a{
     border: 5px solid grey;
     border-top: 0px;
     border-left: 0;
+}
+
+input{
+    padding: 10px;
+    margin: 20px;
+    font-size: large;
 }

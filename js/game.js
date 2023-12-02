@@ -1,5 +1,4 @@
 var HighScore = 0;
-//Game Sound
 var main_sound, play_game_sound, incorrect_hit_sound;
 
 const playMainSound = () => {
@@ -50,7 +49,7 @@ const StartNewGame = () => {
                                                                 </div>
 
                                                             `
-                HighScore = Math.max(HighScore, score_val)
+                gameOver();
             }
         }, 1000)
         
@@ -121,3 +120,9 @@ document.addEventListener('DOMContentLoaded', () => {
     incorrect_hit_sound = document.getElementById('incorrect_sound');
     StartNewGame()
 })
+
+
+const gameOver = () => {
+    HighScore = Math.max(HighScore, score_val);
+    // submitScore(score_val);
+}
